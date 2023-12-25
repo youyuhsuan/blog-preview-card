@@ -1,0 +1,96 @@
+// // ## Colors
+
+// ### Primary
+$Yellow: hsl(47, 88%, 63%);
+
+// ### Neutral
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 50%);
+$Black: hsl(0, 0%, 7%);
+
+@import "reset.scss";
+
+@mixin Mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+body {
+  background: url("/design/mobile-design.jpg") no-repeat;
+  font-family: "Figtree";
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 465rem;
+  // margin-top: 156px;
+  padding: 0% 1.5%;
+
+  border-radius: 20px;
+  border: $Black 0.02em solid;
+  // background: $White;
+  box-shadow: 0.5em 0.5em $Black;
+  @include Mobile {
+    max-width: 100%;
+    max-height: 60%;
+  }
+}
+
+.card-img {
+  border-radius: 12px;
+  margin-bottom: 6%;
+}
+
+.card-body {
+  .type {
+    display: inline-block;
+    background: $Yellow;
+    border-radius: 5px;
+    color: $Black;
+    font-size: 1.2em;
+    font-weight: 900;
+    padding: 2% 4%;
+    font-size: 0.4em;
+    margin-bottom: 0.5%;
+  }
+
+  .published {
+    font-weight: 600;
+    font-size: 0.8em;
+    margin-bottom: 8%;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    font-weight: 800;
+  }
+
+  .text {
+    color: $Grey;
+    line-height: 1.6em;
+    font-weight: 600;
+  }
+
+  .avater {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .img-avater {
+      width: 32px;
+      height: 32px;
+      margin-right: 4%;
+    }
+
+    p {
+      font-weight: 800;
+      font-size: 0.8em;
+    }
+  }
+}
