@@ -54,10 +54,11 @@ body {
     background: $Yellow;
     border-radius: 5px;
     color: $Black;
-    font-size: 1.2em;
-    font-weight: 900;
+    font{
+      size: 1.2em;
+      weight: 900;
+    }
     padding: 2% 4%;
-    font-size: 0.4em;
     margin-bottom: 0.5%;
   }
 
